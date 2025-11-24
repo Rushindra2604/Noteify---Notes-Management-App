@@ -1,0 +1,79 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Header Section — unified across all pages */
+header {
+  background-color: #ff9900;
+  height: 70px; /* same height as reset + otp */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px; /* same padding */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Logo and Divider — same as reset + otp */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6em; /* 26px equivalent */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: rgb(7, 7, 7);
+}
+
+.divider {
+  width: 3px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* Navbar links */
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 12px;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Main Content */
+main {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+main h1 {
+  color: #ff9900;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(255, 153, 0, 0.3);
+}
+
+main p {
+  font-size: 1.1em;
+  color: #f1eded;
+}

@@ -1,0 +1,251 @@
+/* ===============================
+   GLOBAL THEME
+   =============================== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+.navbar {
+    background: #ff9900;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hello-text {
+    font-size: 16px;
+}
+
+.login-link {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Circle */
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background: #111;
+    border: 2px solid orange;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.7);
+}
+
+/* ===============================
+   SIDEBAR (Hidden initially)
+   =============================== */
+/* SIDEBAR HIDDEN BY DEFAULT */
+#sidebar-toggle {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 85px;                      /* below navbar */
+    right: -340px;                  /* hidden completely */
+    width: 300px;
+    background: #111;
+    padding: 25px 20px;
+    border-radius: 10px 0 0 10px;
+    color: white;
+    transition: right 0.35s ease-in-out;
+    z-index: 999;
+}
+
+/* SHOW SIDEBAR WHEN TOGGLE CHECKED */
+#sidebar-toggle:checked ~ .sidebar {
+    right: 0;
+}
+
+/* OVERLAY (visible only when sidebar open) */
+.overlay {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 998;
+}
+
+#sidebar-toggle:checked ~ .overlay {
+    display: block;
+}
+
+/* Toggle row */
+.toggle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background: #666;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.switch input:checked + .slider {
+    background: #ff9900;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Profile circle spacing fix */
+.hello-text {
+    margin-right: 12px;
+}
+
+.profile-circle {
+    margin-left: 10px;
+}
+
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+    position: absolute;
+    background: #000;
+    color: white;
+    padding: 70px 80px 25px;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 10px 35px rgba(255, 255, 255, 0.10);
+
+}
+
+/* --- GRID LAYOUT --- */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+/* --- HEADINGS (aligned equally) --- */
+.footer-title {
+    color: #ff9800;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- PARAGRAPH STYLE --- */
+.footer-column p {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* --- SOCIAL ICONS WRAPPER --- */
+.footer-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+/* --- ROUND GLOWING ICON BUTTONS --- */
+.footer-icons a {
+    width: 42px;
+    height: 42px;
+    background: #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer-icons a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Hover effect */
+.footer-icons a:hover {
+    background: #ff9800;
+    box-shadow: 0 0 25px rgba(255, 140, 0, 1);
+}
+
+.footer-icons a:hover img {
+    filter: brightness(0);
+}
+
+/* --- BOTTOM TEXT --- */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}

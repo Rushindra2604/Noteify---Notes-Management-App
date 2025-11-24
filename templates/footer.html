@@ -1,0 +1,60 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NotesApp{% endblock %}</title>
+
+    <!-- Font Awesome (Needed for social icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<footer>
+    <div class="footer-container">        
+        <!-- Column 1 -->
+        <div class="footer-column">
+            <h3 class="footer-title">Noteify</h3>
+            <p>
+                Noteify is your personal note management tool designed to help you stay 
+                organized, productive, and creative all in one place.
+            </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-column">
+            <h3 class="footer-title">Address</h3>
+            <p>
+                Noteify Headquarters<br>
+                45 Innovation Street,<br>
+                Tech Valley, Hyderabad,<br>
+                India - 500032
+            </p>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <p>Email: support@noteify.com</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-column">
+           <h3 class="footer-title">Follow Us</h3>
+          <div class="footer-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Noteify. All rights reserved.
+    </div>
+</footer>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+
+{% block content %}
+  <main>
+    <section class="content">
+      <h1>Welcome to Noteify</h1>
+      <p>Manage your notes easily and securely.</p>
+    </section>
+  </main>
+{% endblock %}

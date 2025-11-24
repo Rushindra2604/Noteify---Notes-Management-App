@@ -1,0 +1,163 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body styling */
+body {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff9900;
+  height: 70px;
+  padding: 0 40px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo and divider */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 0.5px; /* consistent spacing */
+  color: #fff;
+  gap: 8px;
+}
+
+.divider {
+  width: 3px;
+  height: 45px;
+  margin-left: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #ff9900;
+  border-radius: 5px;
+}
+
+/* Navbar links (optional) */
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 12px;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Main content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+  background: #000;
+}
+
+/* Register form container */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 0.95em;
+  margin: 10px 0 5px;
+  color: #ddd;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+  outline: none;
+  font-size: 0.95em;
+}
+
+input::placeholder {
+  color: #ff9900;
+}
+
+input:focus {
+  border: 2px solid #ff9900;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  background: linear-gradient(to right, #ff7a00, #ff9900);
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff9900;
+}
+
+/* Footer links */
+.links {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.links a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

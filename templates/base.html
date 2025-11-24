@@ -1,0 +1,27 @@
+<head>
+  <title>{% block title %}Noteify{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-Mx8eY1fDdQEDuVfF2ol1Riz6emvbHZcGweVEPLX0k7f2ZqBySBvYPS3PKV2X4S2SboSgJ4RoCP6H7OaT9w2+qA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

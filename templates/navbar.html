@@ -1,0 +1,51 @@
+<header class="navbar">
+    <div class="logo-section">
+        <a href="{{ url_for('dashboard') }}" class="logo">Noteify</a>
+    </div>
+
+    <nav class="navbar-right">
+        {% if session.get('username') %}
+            <span class="hello-text">Hello, {{ session.get('username') }}</span>
+            <label for="sidebar-toggle" class="profile-circle">
+                {{ session.get('username')[0] | upper }}
+            </label>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="login-link">Login</a>
+        {% endif %}
+    </nav>
+</header>
+
+<!-- Hidden sidebar toggle -->
+<input type="checkbox" id="sidebar-toggle" hidden>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2>User Details</h2>
+
+    <p><strong>Joined At:</strong> {{ session.get('joined_at') }}</p>
+    <p><strong>Name:</strong> {{ session.get('username') }}</p>
+    <p><strong>Email:</strong> {{ session.get('email') }}</p>
+
+    <div class="toggle-row">
+        <span>Two-Step Verification</span>
+        <form id="two-step-form" action="{{ url_for('toggle_two_step') }}" method="POST">
+            <label class="switch">
+                <input type="checkbox" name="two_step"
+                       {% if session.get('two_step') %}checked{% endif %}
+                       id="two-step-checkbox">
+                <span class="slider"></span>
+            </label>
+        </form>
+    </div>
+
+    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+</aside>
+
+<!-- DARK OVERLAY -->
+<label for="sidebar-toggle" class="overlay"></label>
+
+<script>
+document.getElementById("two-step-checkbox").addEventListener("change", function () {
+    document.getElementById("two-step-form").submit();
+});
+</script>
