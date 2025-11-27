@@ -1,17 +1,12 @@
-#pip install mysql-connector-python
-
 import mysql.connector
+import os
 
 db = mysql.connector.connect(
-    host='localhost',
-    port=3306,
-    user='root',
-    password='@RUSHI26',
-    database='noteify',
-    connection_timeout=5,
-    use_pure=True
+    host=os.environ["DB_HOST"],
+    port=int(os.environ["DB_PORT"]),
+    user=os.environ["DB_USER"],
+    password=os.environ["DB_PASSWORD"],
+    database=os.environ["DB_NAME"]
 )
-
-print("Database connection established.")
 
 cursor = db.cursor()
